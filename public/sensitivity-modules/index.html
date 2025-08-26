@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生态敏感性评价与决策</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://pss.bdstatic.com/static/superman/js/lib/jquery-1-edb203c114.10.2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="tech-corner tech-corner-tl"></div>
+            <div class="tech-corner tech-corner-tr"></div>
+            <div class="tech-corner tech-corner-bl"></div>
+            <div class="tech-corner tech-corner-br"></div>
+            <h1>生态敏感性监测与分析</h1>
+        </header>
+        
+        <div class="content">
+            <!-- 左侧区域 -->
+            <div class="left-panel">
+                <div class="region-info">
+                    <h2>行政区</h2>
+                    <div class="admin-area">
+                        <div id="region-info" class="region-content">
+                            <div class="region-item">
+                                <div class="tags">
+                                    <span class="tag region-name">请点击地图选择地区</span>
+                                    <span class="tag sensitivity-level"></span>
+                                </div>
+                                <div class="basic-info">
+                                    <p class="region-description">点击地图上的区域查看详细信息</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="charts">
+                    <div class="chart-container">
+                        <h3>生态敏感性变化</h3>
+                        <div id="trendChart" class="chart"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>气候敏感性变化</h3>
+                        <div id="gasChart" class="chart"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>自然敏感性变化</h3>
+                        <div id="natureChart" class="chart"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>人类干扰敏感性变化</h3>
+                        <div id="humanChart" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中间区域 -->
+            <div class="center-panel">
+                <div id="mainMap" class="main-map"></div>
+            </div>
+
+            <!-- 右侧区域 -->
+            <div class="right-panel">
+                <div class="indicator-distribution">
+                    <h2>指标权重分配</h2>
+                    <div id="pieChart" class="chart"></div>
+                </div>
+                <div class="statistics">
+                    <h2 id="statisticsTitle">敏感性统计情况</h2>
+                    <div id="barChart" class="chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
